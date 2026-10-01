@@ -10,7 +10,40 @@ A DataMonster skill for [Claude Code](https://code.claude.com) that helps a tech
 >
 > This is an educational skill that walks you through composing managed-agent primitives to solve your problem. Because it explains each step, it's more token-intensive than a purpose-built agent would be.
 
-## Quickstart
+## Quickstart — Claude desktop app (starting from zero)
+
+No terminal needed. If you've never used Claude Code before, start here.
+
+**1. Install the Claude desktop app and sign in**
+Download it from [claude.ai/download](https://claude.ai/download) (Mac or Windows) and sign in. Claude Code needs a paid plan (Pro, Max, Team or Enterprise).
+
+**2. Download this project**
+On this GitHub page, click the green **Code** button → **Download ZIP**, then unzip it somewhere easy to find (e.g. `Documents`). The folder will be called `create-your-agent-main`. That's fine, keep the name.
+*(Already use git? You can clone it instead with the command in the terminal Quickstart below.)*
+
+**3. Open the folder in Claude Code**
+In the desktop app, open the **Code** tab and start a new session. When it asks for a folder, choose the `create-your-agent-main` folder you just unzipped. Choose that folder itself, not its parent and not a subfolder inside it.
+
+**4. Start the skill**
+In the chat box, type:
+
+```
+/create-your-agent
+```
+
+Claude will interview you about what you want to build, then scope it, launch it, grade it and iterate. Answer in plain language.
+
+**5. Add your API key when asked**
+Partway through, the skill asks for an Anthropic API key from **your own** account. Create one at [platform.claude.com](https://platform.claude.com) → **API keys**. Claude creates a `my-agent/.env` file for you. Open it from the app's file pane, paste the key after `ANTHROPIC_API_KEY=`, save, and tell Claude you're done. **Never paste the key into the chat.** Runs cost cents.
+
+**6. Wrap up**
+When you're finished, or any time later, type `/wrap-up` to get the overview page, a recap of everything you built and suggested next steps. Your agent lives in your Anthropic Console, and its files are in the `my-agent/` folder.
+
+**Troubleshooting**
+- *`/create-your-agent` isn't recognised:* the session is open on the wrong folder. Start a new session and choose the folder that directly contains `README.md` and the (hidden) `.claude` folder.
+- *Windows:* Claude Code needs Git for Windows. If the app prompts you to install it, do that first, then start a new session.
+
+## Quickstart — terminal
 
 ```bash
 git clone https://github.com/pablodatamonster/create-your-agent.git
